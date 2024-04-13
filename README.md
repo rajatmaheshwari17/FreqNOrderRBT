@@ -8,6 +8,7 @@ This project implements a Dictionary Abstract Data Type (ADT) using a Red-Black 
 
 - **Red-Black Tree Implementation**: A complete implementation of the red-black tree to manage balanced data storage.
 - **Dictionary ADT**: The dictionary supports basic operations such as insert, search, delete, and traversal methods to interact with key-value pairs stored within the red-black tree.
+- **Order Utility**: The `Order.cpp` program reads unique strings from an input file and inserts them into the Dictionary with their corresponding line numbers as values. It outputs two representations of the dictionary: one showing key-value pairs in alphabetical order and another showing keys as per a pre-order tree traversal.
 - **Pre-Order Traversal**: An enhanced pre-order traversal that indicates the color (red or black) of each node, which helps in verifying the properties of the red-black tree.
 - **Word Frequency Counter**: A utility program (`WordFrequency.cpp`) that reads text files, tokenizes the content into words, and counts the frequency of each word using the Dictionary ADT.
 - **Case Insensitivity**: The word tokenizer converts all text to lowercase to ensure case-insensitive processing.
@@ -18,7 +19,7 @@ This project implements a Dictionary Abstract Data Type (ADT) using a Red-Black 
 - **Dictionary.h**: Header file for the Dictionary ADT with Red-Black Tree specifics.
 - **Dictionary.cpp**: Implementation of the Dictionary ADT using a Red-Black Tree.
 - **DictionaryTest.cpp**: Test client for the Dictionary ADT.
-- **Order.cpp**: A utility program to demonstrate the order operations similar to previous implementations.
+- **Order.cpp**: A client that processes and orders unique strings from files, then displays them in specific formats.
 - **WordFrequency.cpp**: Main client program designed to count word frequencies in large text files.
 - **Makefile**: Build instructions for compiling the projects.
 - **README.md**: This file, explaining the project and its components.
@@ -31,17 +32,24 @@ To compile the project, ensure you have a C++ compiler that supports C++11 or la
 make
 ```
 
-This will compile all the components. To run the word frequency program, use:
+This will compile all the components. To run the specific clients:
 
-```bash
-./WordFrequency [input_file.txt]
-```
+- **Word Frequency Counter**:
+  ```bash
+  ./WordFrequency [input_file.txt]
+  ```
+  Replace `[input_file.txt]` with the path to your text file.
 
-Replace `[input_file.txt]` with the path to your text file.
+- **Order Utility**:
+  ```bash
+  ./Order [input_file.txt]
+  ```
+  Replace `[input_file.txt]` with the path to your text file, where each line contains a unique string.
 
 ## Testing
 
 The `DictionaryTest.cpp` file contains various test cases for the Dictionary ADT to ensure all functionalities are working as expected. Run these tests to verify the correctness of the implementation.
 
 ---
+
 _This README is a part of the FreqNOrderRBT Project by Rajat Maheshwari._
